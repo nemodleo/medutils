@@ -13,6 +13,9 @@ plt.close('all')
 
 DICOM_OFFSET = 0
 
+fft  = lambda x, ax : np.fft.fftshift(np.fft.fftn(np.fft.ifftshift(x, axes=ax), axes=ax, norm='ortho'), axes=ax) 
+ifft = lambda X, ax : np.fft.fftshift(np.fft.ifftn(np.fft.ifftshift(X, axes=ax), axes=ax, norm='ortho'), axes=ax) 
+
 def rss(img, coil_axis=-1):
     """ Compute root-sum-of-squares reconstruction
     :param img: input image (np.array)
