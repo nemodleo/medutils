@@ -11,9 +11,7 @@ This repository contains useful functions for medical image processing and recon
 
 Installation
 ------------
-To install the package, simply execute following commands. All dependencies will
-be installed automatically.
-~~~
-$ python setup.py bdist_wheel
-$ pip install dist/<your-medutils-wheel-package>.whl
-~~~
+
+```bash
+pip install git+https://github.com/nemodleo/medutils.git
+```
